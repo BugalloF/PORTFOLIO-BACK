@@ -2,3 +2,5 @@ dbport.json
 env
 .env
 __pycache__
+
+static
