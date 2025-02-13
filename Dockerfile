@@ -17,4 +17,4 @@ RUN pip install --no-cache-dir -r requirements.txt
 EXPOSE 8000
 
 # Comando por defecto para ejecutar la aplicación
-CMD ["gunicorn", "--bind", "0.0.0.0:8000", "portfolio_back.wsgi:application"]
+CMD python manage.py collectstatic --noinput && gunicorn --bind 0.0.0.0:${PORT} portfolio_back.wsgi:application
